@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
 		
 			when{
-				changeset "helloworld.js",
-				caseSensitive: true
+				changeset pattern: "helloworld.js", caseSensitive: true
 			}
 		
             steps {                
